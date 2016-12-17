@@ -1,0 +1,35 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	android:layout_marginTop="?actionBarSize"
+	android:padding="10dp">
+
+	<View
+		android:id="@+id/my_view_big"
+		android:layout_width="match_parent"
+		android:layout_height="200dp"
+		android:background="@drawable/btn_rectangle"
+		android:transitionName="@string/transit_view"
+		android:visibility="visible"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:text="Hi "
+		android:textColor="@android:color/darker_gray"
+		android:textSize="20sp"
+		android:textStyle="bold"/>
+
+	<Button
+		style="@style/button"
+		android:layout_marginTop="@dimen/activity_horizontal_margin"
+		android:id="@+id/exit_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Back"/>
+
+</LinearLayout>

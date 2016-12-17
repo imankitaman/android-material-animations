@@ -1,0 +1,32 @@
+<resources>
+
+    <style name="MyAppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="colorControlHighlight">@color/ripple_color</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+
+    </style>
+
+
+    <!-- go for this one -->
+    <style name="button" parent="Base.Widget.AppCompat.Button">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@drawable/btn_rectangle</item>
+    </style>
+
+
+    <style name="buttond" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@drawable/btn_round_corner</item>
+    </style>
+
+
+    <style name="buttonds" parent="Base.Widget.AppCompat.Button">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@drawable/btn_rectangle</item>
+    </style>
+
+</resources>

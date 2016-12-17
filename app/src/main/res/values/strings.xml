@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Animations Sample</string>
+
+    <string name="transit_view">transit_view</string>
+
+    <string name="transit_image">transit_image</string>
+
+    <string name="transition_track_header" translatable="false">transition_track_header</string>
+
+    <string name="transition_track_title" translatable="false">transition_track_title</string>
+
+    <string name="transition_track_background" translatable="false">transition_track_background</string>
+
+    <string name="transition_session_background" translatable="false">transition_session_background</string>
+
+    <string name="transition_session_image" translatable="false">transition_session_image</string>
+
+
+    <string name="transit_card_title">transit_title</string>
+
+    <string name="transit_card_sub_title">transit_sub_title</string>
+
+
+</resources>
