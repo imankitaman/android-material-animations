@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/reveal_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/sample_body"
+        android:layout_marginTop="?actionBarSize"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:text="Sample Activity demonstrating how to create different CirculaReveal animations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:layout_height="84dp"
+        android:layout_width="84dp"
+        android:id="@+id/square_green"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_margin="2dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/circle_24dp"
+        android:tint="@color/sample_green" />
+
+    <ImageView
+        android:id="@+id/square_red"
+        android:layout_height="84dp"
+        android:layout_width="84dp"
+        android:layout_toRightOf="@id/square_green"
+        android:layout_alignParentBottom="true"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_margin="2dp"
+        android:src="@drawable/circle_24dp"
+        android:tint="@color/sample_red" />
+
+    <ImageView
+        android:id="@+id/square_blue"
+        android:layout_toRightOf="@id/square_red"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/circle_24dp"
+        android:tint="@color/sample_blue"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_margin="2dp"
+        android:layout_height="84dp"
+        android:layout_width="84dp"/>
+
+    <ImageView
+        android:id="@+id/square_yellow"
+        android:layout_toRightOf="@id/square_blue"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/circle_24dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_margin="2dp"
+        android:tint="@color/sample_yellow"
+        android:layout_height="84dp"
+        android:layout_width="84dp"/>
+</RelativeLayout>

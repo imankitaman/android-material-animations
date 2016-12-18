@@ -20,6 +20,7 @@
         <activity android:name=".RippleActivity"/>
         <activity android:name=".TransitionListActivity"/>
         <activity android:name=".TransitionActivity"/>
+        <activity android:name=".RevealActivity"/>
     </application>
 
 </manifest>

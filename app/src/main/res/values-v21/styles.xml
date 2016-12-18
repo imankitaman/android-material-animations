@@ -24,10 +24,8 @@
 
         <!--specify shared element transitions -->
         <!-- Demo by android doc  -->
-        <!--<item name="android:windowSharedElementEnterTransition">-->
-            <!--@transition/change_image_transform</item>-->
-        <!--<item name="android:windowSharedElementExitTransition">-->
-            <!--@transition/change_image_transform</item> -->
+        <!--<item name="android:windowSharedElementEnterTransition">@transition/change_image_transform</item>-->
+        <!--<item name="android:windowSharedElementExitTransition">@transition/change_image_transform</item>-->
     </style>
 
 

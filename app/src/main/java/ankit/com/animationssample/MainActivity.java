@@ -1,6 +1,9 @@
 package ankit.com.animationssample;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,13 +15,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        TextView ripple = (TextView) findViewById(R.id.txt_ripple);
-//        TextView rv_shared_transition = (TextView) findViewById(R.id.txt_rv_shared_transition);
-//        TextView shared_circular_reveal = (TextView) findViewById(R.id.txt_shared_circular_reveal);
-
-//        UiUtil.visibleFab(myView);
-
 
     }
 
@@ -34,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openCircularReveal(View v){
-        Intent i = new Intent(MainActivity.this, RecycleAdapterActivity.class);
+        Intent i = new Intent(MainActivity.this, RevealActivity.class);
         startActivity(i);
     }
 

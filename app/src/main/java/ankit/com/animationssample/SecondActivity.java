@@ -46,7 +46,6 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     public void onEnterAnimationComplete() {
         super.onEnterAnimationComplete();
-//        UiUtil.makeCircularRevealAnimation(my_view_big);
     }
 
     private void slideAnimation() {
