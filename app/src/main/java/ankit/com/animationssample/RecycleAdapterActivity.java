@@ -3,6 +3,7 @@ package ankit.com.animationssample;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.transition.Fade;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -50,7 +51,7 @@ public class RecycleAdapterActivity extends AppCompatActivity {
         });
         rvw_dummy.setAdapter(dummyAdapter);
         rvw_dummy.setLayoutManager(new LinearLayoutManager(this));
-
+        rvw_dummy.addItemDecoration(new SpaceItemDecoration(8));
     }
 
 }

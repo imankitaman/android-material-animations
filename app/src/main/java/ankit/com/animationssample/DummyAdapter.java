@@ -1,10 +1,17 @@
 package ankit.com.animationssample;
 
+import android.content.Context;
+import android.graphics.Point;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.util.Pair;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 
 import java.util.List;
@@ -18,6 +25,8 @@ public class DummyAdapter extends RecyclerView.Adapter<DummyAdapter.DummyViewHol
 
     private List<String> dummyData;
     private dummyAdapterCallback dummyAdapterCallback;
+    private int lastPosition = -1;
+    private Context mContext;
 
     public DummyAdapter(List<String> dummy, dummyAdapterCallback dummyAdapterCallback) {
         this.dummyData = dummy;
@@ -27,11 +36,13 @@ public class DummyAdapter extends RecyclerView.Adapter<DummyAdapter.DummyViewHol
     @Override
     public DummyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_dummy, parent, false);
+        mContext = parent.getContext();
         return new DummyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final DummyViewHolder holder, int position) {
+        runEnterAnimation(holder.itemView);
         final Pair[] viewStringPair = new Pair[]{Pair.create(holder.view, holder.itemView.getResources().getString(R.string.transit_view)),
                 Pair.create((View) holder.txt_title, holder.itemView.getResources().getString(R.string.transit_card_title))};
 
@@ -42,6 +53,34 @@ public class DummyAdapter extends RecyclerView.Adapter<DummyAdapter.DummyViewHol
                 dummyAdapterCallback.onItemClick(dummyData.get(holder.getAdapterPosition()), viewStringPair);
             }
         });
+
+    /*    if (position > lastPosition) {
+            holder.itemView.setTranslationY(getScreenHeight());
+            holder.itemView.animate()
+                    .translationY(0)
+                    .setInterpolator(new DecelerateInterpolator(3.f))
+                    .setDuration(700)
+                    .start();
+            lastPosition = position;
+
+//            Animation animation = AnimationUtils.loadAnimation(holder.itemView.getContext(),
+//                    R.anim.up_from_bottom);
+//            holder.itemView.startAnimation(animation);
+        }
+        */
+    }
+
+    private void runEnterAnimation(View view) {
+        view.setTranslationY(getScreenHeight());
+        view.animate()
+                .translationY(0)
+                .setInterpolator(new DecelerateInterpolator(3.f))
+                .setDuration(1000)
+                .start();
+    }
+
+    private int getScreenHeight() {
+        return mContext.getResources().getDisplayMetrics().heightPixels;
     }
 
     @Override
